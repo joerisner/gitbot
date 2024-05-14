@@ -1,0 +1,17 @@
+name: 'Gitbot'
+description: 'A Github action for performing git-based tasks automatically.'
+author: 'Joe Risner'
+inputs:
+  repo-token:
+    required: false # TODO: Update later
+    description: 'The GITHUB_TOKEN secret'
+  who-to-greet:
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time:
+    description: 'The time we greeted you'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
